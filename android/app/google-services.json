@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "680412008840",
+    "project_id": "teko-test"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680412008840:android:a339976bbc7c50f2",
+        "android_client_info": {
+          "package_name": "com.tekotest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680412008840-98r80hf0qq2fa2kmueap4a37ho8n5l9g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tekotest",
+            "certificate_hash": "e219aa612a55b0bdd158f951760bfe1a98fe6c4a"
+          }
+        },
+        {
+          "client_id": "680412008840-fkms9j4eoabt11ocmk8m99dbn4gklfet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANismN3sacn8lUbcpLCAPp3gULduZjvgM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
