@@ -36,7 +36,9 @@ class LoginContainer extends Component {
     LoginManager.logInWithReadPermissions(['public_profile']).then(
       function(result) {
         if (result.isCancelled) {
-          alert('Login cancelled')
+          _this.setState({
+            isSingingIn: false
+          })
         } else {
           AccessToken.getCurrentAccessToken().then(data => {
             let accessToken = {
@@ -53,48 +55,12 @@ class LoginContainer extends Component {
         }
       },
       function(error) {
-        _sthis.setState({
+        _this.setState({
           isSingingIn: false
         })
       }
     )
   }
-
-  // signInWithGoogleAsync = async () => {
-  //   let _this = this
-  //   let { dispatch } = this.props
-  //   this.setState({
-  //     isSingingIn: true
-  //   })
-  //   try {
-  //     const result = await Expo.Google.logInAsync({
-  //       androidClientId:
-  //         '680412008840-iqd3p91nevbp59kb4dlbonivm2k79rib.apps.googleusercontent.com',
-  //       iosClientId:
-  //         '680412008840-slhogjmlv2l4ob3pj9ktikd2nmnpd3pm.apps.googleusercontent.com',
-  //       scopes: ['profile', 'email']
-  //     })
-
-  //     if (result.type === 'success') {
-  //       this.setState({
-  //         isSingingIn: false
-  //       })
-  //       let accessToken = { type: 'google', value: result.accessToken }
-  //       dispatch(setAccessToken(accessToken))
-  //       _this.props.navigation.navigate('Profile')
-  //     } else {
-  //       this.setState({
-  //         isSingingIn: false
-  //       })
-  //       console.log('cancel')
-  //     }
-  //   } catch (e) {
-  //     console.log(e)
-  //     this.setState({
-  //       isSingingIn: false
-  //     })
-  //   }
-  // }
 
   _setupGoogleSignin = async () => {
     try {
